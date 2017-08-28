@@ -23,7 +23,7 @@ describe('<Voting />', () => {
         let votedWith;
         const vote = (entry) => votedWith = entry;
         const wrapper = mount(<Voting pair={pair} voteOnClick={vote} />);
-        const buttons = wrapper.find('div.voting Vote').children();
+        const buttons = wrapper.find('.voting').children();
         const button_one = buttons.at(0)
 
         button_one.simulate('click');
