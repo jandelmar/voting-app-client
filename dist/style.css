@@ -33,10 +33,10 @@ body {
   }
   .voting button:active {
     background-color: white;
-    color: #311B92;
+    color: #4D2692;
   }
   .voting button.voted {
-    background-color: #311B92;
+    background-color: #4D2692;
   }
   .voting button:not(.voted) .label {
     visibility: hidden;
@@ -105,14 +105,13 @@ body {
   .results .management {
     display: flex;
   
-    height: 2em;
-    border-top: 1px solid #aaa;
+    height: 10vh;
   }
   
   .results .management button {
     border: 0;
-    background-color: black;
-    color: #aaa;
+    background-color: #4A2984;
+    color: white;
   }
   .results .management .next {
     flex: 1;

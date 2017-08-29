@@ -22,7 +22,7 @@ describe('<Voting />', () => {
     it('invokes callback when a button is clicked', () => {
         let votedWith;
         const vote = (entry) => votedWith = entry;
-        const wrapper = mount(<Voting pair={pair} voteOnClick={vote} />);
+        const wrapper = mount(<Voting pair={pair} vote={vote} />);
         const buttons = wrapper.find('.voting').children();
         const button_one = buttons.at(0)
 
@@ -30,4 +30,6 @@ describe('<Voting />', () => {
         
         expect(votedWith).to.equal('Trainspotting');
     });
+
+   
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vote = ({pair, hasVoted, voteOnClick}) => {
+const Vote = ({pair, hasVoted, vote}) => {
   const getPair = () => {
     return pair || [];
   }
@@ -17,8 +17,9 @@ const Vote = ({pair, hasVoted, voteOnClick}) => {
     <div className="voting">
       {getPair().map(entry =>
           <button key={entry}
+                  className={hasVotedFor(entry) ? "voted" : null}
                   disabled={isDisabled()}
-                  onClick={() => voteOnClick(entry)}>
+                  onClick={() => vote(entry)}>
             <h1>{entry}</h1>
             {hasVotedFor(entry) ?
               <div className="label">Voted</div> :
